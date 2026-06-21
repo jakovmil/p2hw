@@ -1,0 +1,17 @@
+import re
+
+pravilo_email = r"^[a-zA-Z]+\.[a-zA-Z]+@fpmoz\.sum\.ba$"
+pravilo_edu = r"^[a-zA-Z]+\.[a-zA-Z]+[0-9]*@sum\.ba$"
+
+mail_adresa = input("Upiši e-mail: ")
+edu_oznaka = input("Upiši eduId: ")
+
+if re.match(pravilo_email, mail_adresa):
+    print("E-mail adresa je valjana.")
+else:
+    print("E-mail adresa nije valjana.")
+
+if re.match(pravilo_edu, edu_oznaka):
+    print("Uneseni eduId je valjan.")
+else:
+    print("Uneseni eduId nije valjan.")
